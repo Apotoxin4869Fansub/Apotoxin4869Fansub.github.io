@@ -1,0 +1,139 @@
+@charset "UTF-8";
+html{
+  min-height:100%;
+}
+
+body{
+  font-size: 15px;
+  font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  line-height: 1.6;
+  color: #000;
+  width: 100%;
+  min-height:100%;
+  background: #000;
+  margin: 0;
+  padding: 0;
+}
+body.is-gnavOpen{
+  position: fixed;
+}
+
+a:link { color: #ffd093; }
+a:visited { color: #fcff00; }
+a:hover { color: #74a648; }
+a:active { color: #ffd093; }
+
+.alphaBnr a img{
+  transition: .3s;
+}
+.alphaBnr a:hover img{
+  opacity:0.6;
+}
+
+
+/*---------------------------------
+      loading
+----------------------------------*/
+.loadingOverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 100;
+  color: #fff;
+  background: #ff5dc3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes loadingChara {
+  0%   { opacity: .7; }
+  10%   { opacity: .68; }
+  40%   { opacity: .32; }
+  50% {opacity: .3;}
+  60%   { opacity: .32; }
+  90%   { opacity: .68; }
+  100% { opacity: .7; }
+}
+
+.loadingOverlay .loadingLogo{
+  margin: 15px 0 10px;
+}
+
+.loadingOverlay .loadingLogo img{
+  animation-name: loadingChara;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  width: 140px;
+}
+.loadingOverlay .loadingIsologo img{
+  animation-name: loadingChara;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  width: 250px;
+}
+.loadingOverlay .loadingText{
+  line-height: 1;
+  display: flex;
+}
+
+.loadingOverlay .loadingDot{
+  display: inline-block;
+  width: 15px;
+  line-height: 1;
+  margin-left: 5px;
+  overflow: hidden;
+}
+
+.loadingOverlay .loadingDot span{
+  display: inline-block;
+  line-height: 1;
+  width: 15px;
+  animation-name: loadingDot;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  overflow: hidden;
+}
+
+.loadingLogo.is-show{
+  display: none;
+}
+
+.loadingOverlay.is-show{
+  display: none;
+}
+@keyframes loadingDot {
+  0% {
+    width: 15px;
+  }
+  24% {
+    width: 15px;
+  }
+  25% {
+    width: 10px;
+  }
+  49% {
+    width: 10px;
+  }
+  50% {
+    width: 5px;
+  }
+  74% {
+    width: 5px;
+  }
+  75% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.mt10{
+  margin-top:10px;
+}
+
